@@ -19,8 +19,8 @@ newFileNumbers = []
 for file in fileNumbers:
     newFile = file[:len(file)-4]
     newFileNumbers.append(newFile)
-print(fileNumbers)
-print(newFileNumbers)
+# print(fileNumbers)
+# print(newFileNumbers)
 
 def run():
     for folder in folders:
@@ -32,7 +32,7 @@ def run():
                 if num in file:
                     match = True
             if match == False:          # if no numbers in in newFileNumbers array match file name then the file is deleted
-                print(path + ' will be deleted')
+                print(path + ' is being deleted')
                 if os.path.exists(path):            #not sure if this is needed but I added it to be safe
                         os.remove(path)
 
